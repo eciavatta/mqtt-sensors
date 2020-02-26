@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/label_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_host"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/text_host"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="@string/text_host"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/text_port"
+        app:layout_constraintStart_toStartOf="@+id/label_host"
+        app:layout_constraintTop_toBottomOf="@+id/label_host" />
+
+    <TextView
+        android:id="@+id/label_port"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="@string/label_port"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/label_host" />
+
+    <EditText
+        android:id="@+id/text_port"
+        android:layout_width="99dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/text_port"
+        app:layout_constraintEnd_toEndOf="@+id/label_port"
+        app:layout_constraintStart_toStartOf="@+id/label_port"
+        app:layout_constraintTop_toBottomOf="@+id/label_port" />
+
+    <LinearLayout
+        android:id="@+id/switches"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_interval">
+
+        <Switch
+            android:id="@+id/switch_accelerometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_accelerometer" />
+
+        <Switch
+            android:id="@+id/switch_accelerometer_uncalibrated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_accelerometer_uncalibrated" />
+
+        <Switch
+            android:id="@+id/switch_gravity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_gravity" />
+
+        <Switch
+            android:id="@+id/switch_gyroscope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_gyroscope" />
+
+        <Switch
+            android:id="@+id/switch_gyroscope_uncalibrated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_gyroscope_uncalibrated" />
+
+        <Switch
+            android:id="@+id/switch_linear_acceleration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_linear_acceleration" />
+
+        <Switch
+            android:id="@+id/switch_rotation_vector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_rotation_vector" />
+
+        <Switch
+            android:id="@+id/switch_step_counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_step_counter" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/button_connect"
+        app:layout_constraintStart_toStartOf="@+id/label_host"
+        app:layout_constraintTop_toBottomOf="@+id/switches" />
+
+    <Button
+        android:id="@+id/button_disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:enabled="false"
+        android:text="@string/button_disconnect"
+        app:layout_constraintStart_toEndOf="@+id/button_connect"
+        app:layout_constraintTop_toTopOf="@+id/button_connect" />
+
+    <TextView
+        android:id="@+id/label_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/label_status"
+        app:layout_constraintStart_toStartOf="@+id/label_host"
+        app:layout_constraintTop_toBottomOf="@+id/button_connect" />
+
+    <TextView
+        android:id="@+id/label_interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/label_interval"
+        app:layout_constraintStart_toStartOf="@+id/label_host"
+        app:layout_constraintTop_toBottomOf="@+id/text_host" />
+
+    <EditText
+        android:id="@+id/text_interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/text_interval"
+        app:layout_constraintStart_toStartOf="@+id/label_interval"
+        app:layout_constraintTop_toBottomOf="@+id/label_interval" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

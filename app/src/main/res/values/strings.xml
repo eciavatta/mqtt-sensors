@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MqttSensors</string>
+    <string name="label_host">Host</string>
+    <string name="text_host">localhost</string>
+    <string name="label_port">Port</string>
+    <string name="text_port">1883</string>
+    <string name="label_interval">Update interval</string>
+    <string name="text_interval">300</string>
+    <string name="switch_accelerometer">ACCELEROMETER</string>
+    <string name="switch_accelerometer_uncalibrated">ACCELEROMETER_UNCALIBRATED</string>
+    <string name="switch_gravity">GRAVITY</string>
+    <string name="switch_gyroscope">GYROSCOPE</string>
+    <string name="switch_gyroscope_uncalibrated">GYROSCOPE_UNCALIBRATED</string>
+    <string name="switch_linear_acceleration">LINEAR_ACCELERATION</string>
+    <string name="switch_rotation_vector">ROTATION_VECTOR</string>
+    <string name="switch_step_counter">STEP_COUNTER</string>
+    <string name="button_connect">CONNECT</string>
+    <string name="button_disconnect">DISCONNECT</string>
+    <string name="label_status">Not connected</string>
+</resources>
